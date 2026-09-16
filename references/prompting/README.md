@@ -3,7 +3,7 @@ title: Prompting reference mirrors
 when_to_read: refreshing local copies of upstream Claude or OpenAI prompting guides, or finding the path for a full guide linked from guides/prompting.md
 summary:
   - Verbatim upstream mirrors under claude/ and openai/ — do not edit by hand; re-fetch instead
-  - OpenAI set is GPT-5.6 Sol–centered (prompt guidance + using guide + model card)
+  - OpenAI: GPT-5.6 Sol baseline + GPT-6 Astra escalation; Codex and general prompt-engineering
   - Applied checklist lives in guides/prompting.md; this folder is the full text
 ---
 
@@ -22,11 +22,21 @@ Mirrors collected **2026-09-16**. Upstream copyright remains with Anthropic / Op
 
 Index: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/
 
-## OpenAI (GPT-5.6 Sol baseline)
+## OpenAI — GPT-5.6 Sol (baseline)
 
 - [openai/prompt-guidance-gpt-5p6.md](./openai/prompt-guidance-gpt-5p6.md) — https://developers.openai.com/api/docs/guides/prompt-guidance-gpt-5p6.md (primary prompting guidance for GPT-5.6 Sol / family)
 - [openai/using-gpt-5.6.md](./openai/using-gpt-5.6.md) — https://developers.openai.com/api/docs/guides/latest-model/gpt-5.6.md
 - [openai/gpt-5.6.md](./openai/gpt-5.6.md) — https://developers.openai.com/api/docs/models/gpt-5.6.md (model card)
+
+## OpenAI — GPT-6 Astra (escalation)
+
+Use when GPT-5.6 Sol (and Claude Fable 5.1 for review) are not enough — hardest end-to-end work, long multi-step autonomy, computer use / research-heavy tasks.
+
+- [openai/using-gpt-6-astra.md](./openai/using-gpt-6-astra.md) — https://developers.openai.com/api/docs/guides/latest-model/gpt-6-astra.md (includes Prompting best practices)
+- [openai/gpt-6-astra.md](./openai/gpt-6-astra.md) — https://developers.openai.com/api/docs/models/gpt-6-astra.md (model card)
+
+## OpenAI — shared
+
 - [openai/prompt-engineering.md](./openai/prompt-engineering.md) — https://developers.openai.com/api/docs/guides/prompt-engineering.md (general API prompting)
 - [openai/codex-prompting-guide.md](./openai/codex-prompting-guide.md) — https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide.md (Codex / agentic coding harness)
 
@@ -42,6 +52,8 @@ cd "$ROOT/openai"
 curl -sL -o prompt-guidance-gpt-5p6.md "https://developers.openai.com/api/docs/guides/prompt-guidance-gpt-5p6.md"
 curl -sL -o using-gpt-5.6.md "https://developers.openai.com/api/docs/guides/latest-model/gpt-5.6.md"
 curl -sL -o gpt-5.6.md "https://developers.openai.com/api/docs/models/gpt-5.6.md"
+curl -sL -o using-gpt-6-astra.md "https://developers.openai.com/api/docs/guides/latest-model/gpt-6-astra.md"
+curl -sL -o gpt-6-astra.md "https://developers.openai.com/api/docs/models/gpt-6-astra.md"
 curl -sL -o prompt-engineering.md "https://developers.openai.com/api/docs/guides/prompt-engineering.md"
 curl -sL -o codex-prompting-guide.md "https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide.md"
 ```
