@@ -7,7 +7,7 @@ Router for agents working in or with this handbook. Prefer the linked file over 
 | Guide | One line |
 | --- | --- |
 | [guides/writing-style.md](./guides/writing-style.md) | Tone, agent EN / human KO, show-don't-narrate, no hard wrap |
-| [guides/prompting.md](./guides/prompting.md) | Opus / Sonnet / Fable checklist + executor prompt shape |
+| [guides/prompting.md](./guides/prompting.md) | Claude + OpenAI GPT-5.6 checklist; full mirrors in `references/prompting/` |
 | [guides/react-code-style.md](./guides/react-code-style.md) | Seven portable React/TS rules |
 | [guides/commit-conventions.md](./guides/commit-conventions.md) | Atomic Conventional Commits; delivery; push policy |
 

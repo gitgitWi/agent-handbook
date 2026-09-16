@@ -13,18 +13,21 @@ settle-spec  →  planner  →  (plan-review → re-plan)*  →  develop …
 
 ## Install
 
-Clone, then point your agent at the skills (and optionally the guides):
+Clone, then use the skills already wired for this repo:
 
 ```bash
 git clone https://github.com/gitgitWi/agent-handbook.git ~/Codes/agent-handbook
 ```
 
-Examples:
+In this repository:
 
-- Cursor: symlink or copy `skills/*` into `~/.cursor/skills/` or a project's `.cursor/skills/` / `.agents/skills/`
-- Claude Code / Codex: add the repo or individual skill paths per that harness's skill/plugin docs
+- Canonical skill bodies: `skills/<name>/`
+- Codex / agents path: `.agents/skills/<name>` → symlink to `skills/<name>`
+- Claude Code path: `.claude/skills/<name>` → symlink to `.agents/skills/<name>`
 
-Guides are ordinary markdown — link them from `AGENTS.md` / `CLAUDE.md` in a consumer project, or read by path.
+For other projects: symlink or copy `skills/*` into that project's `.agents/skills/` / `.claude/skills/` / `~/.cursor/skills/` as the harness expects.
+
+Guides are ordinary markdown — link them from `AGENTS.md` / `CLAUDE.md`, or read by path. Upstream prompting guides (verbatim): [references/prompting/](./references/prompting/README.md).
 
 ## Skills
 
@@ -43,7 +46,7 @@ Guides are ordinary markdown — link them from `AGENTS.md` / `CLAUDE.md` in a c
 
 | Guide                                                | When                                     |
 | ---------------------------------------------------- | ---------------------------------------- |
-| [prompting](./guides/prompting.md)                   | Dispatch prompts / executor shape        |
+| [prompting](./guides/prompting.md)                   | Claude + OpenAI GPT-5.6 checklist        |
 | [writing-style](./guides/writing-style.md)           | Tone, language split, show-don't-narrate |
 | [react-code-style](./guides/react-code-style.md)     | Portable React/TS style rules            |
 | [commit-conventions](./guides/commit-conventions.md) | Atomic Conventional Commits + delivery   |
