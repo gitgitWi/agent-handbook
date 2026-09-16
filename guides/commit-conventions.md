@@ -14,7 +14,7 @@ summary:
 - End each logical work unit with a `commit`.
 - Commit messages describe the change directly — what changed and why, not a diary of steps.
 - Do not leave work that must reach the remote as local-only when the project expects a push.
-- **This handbook repo** (`agent-handbook`): maintainers push freely once `origin` is set. **Other projects**: follow that repo's delivery rule; if unclear, ask once.
+- **Push policy**: follow the consuming project's delivery rule. If unclear, ask once. This handbook is a personal practice repo — it does not solicit external push or PR contributions.
 
 ## Conventional Commits
 

@@ -28,26 +28,28 @@ Guides are ordinary markdown — link them from `AGENTS.md` / `CLAUDE.md` in a c
 
 ## Skills
 
-| Skill | When |
-| --- | --- |
-| [write-for-human](./skills/write-for-human/SKILL.md) | Document a person will read and act on |
-| [settle-spec](./skills/settle-spec/SKILL.md) | Lock requirements / Done-when before planning |
-| [planner](./skills/planner/SKILL.md) | `plan.md` + `tasks.md` from a settled brief |
+
+| Skill                                                | When                                          |
+| ---------------------------------------------------- | --------------------------------------------- |
+| [write-for-human](./skills/write-for-human/SKILL.md) | Document a person will read and act on        |
+| [settle-spec](./skills/settle-spec/SKILL.md)         | Lock requirements / Done-when before planning |
+| [planner](./skills/planner/SKILL.md)                 | `plan.md` + `tasks.md` from a settled brief   |
+
+
+
 
 ## Guides
 
-| Guide | When |
-| --- | --- |
-| [prompting](./guides/prompting.md) | Dispatch prompts / executor shape |
-| [writing-style](./guides/writing-style.md) | Tone, language split, show-don't-narrate |
-| [react-code-style](./guides/react-code-style.md) | Portable React/TS style rules |
-| [commit-conventions](./guides/commit-conventions.md) | Atomic Conventional Commits + delivery |
+
+| Guide                                                | When                                     |
+| ---------------------------------------------------- | ---------------------------------------- |
+| [prompting](./guides/prompting.md)                   | Dispatch prompts / executor shape        |
+| [writing-style](./guides/writing-style.md)           | Tone, language split, show-don't-narrate |
+| [react-code-style](./guides/react-code-style.md)     | Portable React/TS style rules            |
+| [commit-conventions](./guides/commit-conventions.md) | Atomic Conventional Commits + delivery   |
+
 
 Router for agents in this repo: [AGENTS.md](./AGENTS.md).
-
-## Maintainers
-
-This repository: push freely after commits ([commit-conventions](./guides/commit-conventions.md)). Prefer atomic Conventional Commits with Korean subjects.
 
 ## License
 
