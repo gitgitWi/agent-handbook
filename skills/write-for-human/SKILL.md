@@ -21,12 +21,12 @@ Tone, language split, show-don't-narrate, and no hard wrap: [guides/writing-styl
 
 ## 0. Which document, which shape
 
-| document | reader wants to know | shape | template |
-| --- | --- | --- | --- |
-| decision request | what happened, what must I choose, what do you recommend | 결론 → 무슨 일 → 결정표 → 선택 이유 → 하지 않은 것 | [templates/decision.md](./templates/decision.md) |
-| proposal | what you propose, cost, what changes, what is out | 한 줄 요약 → 배경 → 구조 → 범위 → 효과 → 일정·비용 → 리스크 → 결정 요청 | [templates/proposal.md](./templates/proposal.md) |
-| technical overview | how it is built, how a request flows, where boundaries are | 아키텍처 → 흐름 → 경계 표 → 용어 표 | [templates/tech-overview.md](./templates/tech-overview.md) |
-| report, retrospective, audit | what changed, evidence, what was not done, what waits on me | 결론 → 변경 표 → 측정 → 하지 않은 것 → 결정 대기 | [templates/report.md](./templates/report.md) |
+| document                     | reader wants to know                                        | shape                                                                   | template                                                   |
+| ---------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------- |
+| decision request             | what happened, what must I choose, what do you recommend    | 결론 → 무슨 일 → 결정표 → 선택 이유 → 하지 않은 것                      | [templates/decision.md](./templates/decision.md)           |
+| proposal                     | what you propose, cost, what changes, what is out           | 한 줄 요약 → 배경 → 구조 → 범위 → 효과 → 일정·비용 → 리스크 → 결정 요청 | [templates/proposal.md](./templates/proposal.md)           |
+| technical overview           | how it is built, how a request flows, where boundaries are  | 아키텍처 → 흐름 → 경계 표 → 용어 표                                     | [templates/tech-overview.md](./templates/tech-overview.md) |
+| report, retrospective, audit | what changed, evidence, what was not done, what waits on me | 결론 → 변경 표 → 측정 → 하지 않은 것 → 결정 대기                        | [templates/report.md](./templates/report.md)               |
 
 If the document is none of these, still start from the decision-request shape: conclusion, evidence, choice, omissions.
 
@@ -34,7 +34,7 @@ If the document is none of these, still start from the decision-request shape: c
 
 1. **Conclusion in the first sentence.** Recommendation, verdict, or state. Background only if it changes what the reader does.
 2. **Every heading answers one question, in reading order.** A reader who stops at any heading has a complete answer to everything above it.
-3. **Show structure, do not narrate it.** Order, hierarchy, branch, or comparison → a view (§2), not a paragraph. A paragraph is at most three sentences and exists only for *why this option*.
+3. **Show structure, do not narrate it.** Order, hierarchy, branch, or comparison → a view (§2), not a paragraph. A paragraph is at most three sentences and exists only for _why this option_.
 4. **The smallest view that carries the point.** One table beats one diagram beats three diagrams.
 5. **A decision keeps its options.** Table with 추천안 · 대안 · 비용·위험 · 선택 이유. Dropping an alternative turns a summary into a nudge.
 6. **Reader decides the language.** A human reads Korean. If an English canon exists, the Korean file is derived: first line links the canon; no fact only in Korean; on disagreement English wins.
@@ -43,16 +43,16 @@ If the document is none of these, still start from the decision-request shape: c
 
 ## 2. View catalogue
 
-| the point is | view | fence |
-| --- | --- | --- |
-| policy, algorithm, step order | pseudocode | `text` |
-| what calls what at runtime | call tree, indented | `text` |
-| file/module ownership; scope of a change | shallow file tree; `[ADD]`·`[MODIFY]`·`[DELETE]` + reason | `text` |
-| UI hierarchy and who holds state | component tree | `tsx` |
-| branch, hand-off, data flow | **one** Mermaid `flowchart` or `sequenceDiagram` | `mermaid` |
-| what changes in a shape that already exists | same tree or list as `diff` | `diff` |
-| parallel cases with the same fields | table, short cells, one fact per cell | — |
-| comparison too dense for Mermaid; layout; slide | one focused HTML file, real labels, desktop and mobile | open the file |
+| the point is                                    | view                                                      | fence         |
+| ----------------------------------------------- | --------------------------------------------------------- | ------------- |
+| policy, algorithm, step order                   | pseudocode                                                | `text`        |
+| what calls what at runtime                      | call tree, indented                                       | `text`        |
+| file/module ownership; scope of a change        | shallow file tree; `[ADD]`·`[MODIFY]`·`[DELETE]` + reason | `text`        |
+| UI hierarchy and who holds state                | component tree                                            | `tsx`         |
+| branch, hand-off, data flow                     | **one** Mermaid `flowchart` or `sequenceDiagram`          | `mermaid`     |
+| what changes in a shape that already exists     | same tree or list as `diff`                               | `diff`        |
+| parallel cases with the same fields             | table, short cells, one fact per cell                     | —             |
+| comparison too dense for Mermaid; layout; slide | one focused HTML file, real labels, desktop and mobile    | open the file |
 
 - **Table cells hold one fact and no line break.** If a cell wants a second line, use a heading + bullets.
 - **Checklists are `- [ ]` bullets, never a table.**
@@ -90,14 +90,14 @@ write(doc)
 
 ## 5. Anti-patterns
 
-| seen | do instead |
-| --- | --- |
-| multi-line rationale stuffed into one table cell | heading + `**결정**` / `**근거**` bullets |
-| many diagrams for claims a bullet already carries | smallest view per claim |
-| incident history inside an operating contract | the rule + one dated measurement; history behind a link |
-| a count cited in several files against a drifting source | no count outside the source |
-| English technical plan handed to a human to decide from | Korean derived decision doc with alternatives |
-| "summary" that kept the recommendation and dropped the alternative | every option travels, with its cost |
+| seen                                                               | do instead                                              |
+| ------------------------------------------------------------------ | ------------------------------------------------------- |
+| multi-line rationale stuffed into one table cell                   | heading + `**결정**` / `**근거**` bullets               |
+| many diagrams for claims a bullet already carries                  | smallest view per claim                                 |
+| incident history inside an operating contract                      | the rule + one dated measurement; history behind a link |
+| a count cited in several files against a drifting source           | no count outside the source                             |
+| English technical plan handed to a human to decide from            | Korean derived decision doc with alternatives           |
+| "summary" that kept the recommendation and dropped the alternative | every option travels, with its cost                     |
 
 ## References
 

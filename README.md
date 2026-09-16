@@ -29,8 +29,9 @@ For other projects: symlink or copy `skills/*` into that project's `.agents/skil
 
 Guides are ordinary markdown — link them from `AGENTS.md` / `CLAUDE.md`, or read by path. Upstream prompting guides (verbatim): [references/prompting/](./references/prompting/README.md).
 
-## Skills
+After clone, install format hooks once: [guides/formatting.md](./guides/formatting.md) (`prek` + `oxfmt`, Cursor `afterFileEdit`).
 
+## Skills
 
 | Skill                                                | When                                          |
 | ---------------------------------------------------- | --------------------------------------------- |
@@ -38,19 +39,15 @@ Guides are ordinary markdown — link them from `AGENTS.md` / `CLAUDE.md`, or re
 | [settle-spec](./skills/settle-spec/SKILL.md)         | Lock requirements / Done-when before planning |
 | [planner](./skills/planner/SKILL.md)                 | `plan.md` + `tasks.md` from a settled brief   |
 
-
-
-
 ## Guides
 
-
-| Guide                                                | When                                     |
-| ---------------------------------------------------- | ---------------------------------------- |
+| Guide                                                | When                                          |
+| ---------------------------------------------------- | --------------------------------------------- |
 | [prompting](./guides/prompting.md)                   | Claude + OpenAI GPT-5.6 Sol / Astra checklist |
-| [writing-style](./guides/writing-style.md)           | Tone, language split, show-don't-narrate |
-| [react-code-style](./guides/react-code-style.md)     | Portable React/TS style rules            |
-| [commit-conventions](./guides/commit-conventions.md) | Atomic Conventional Commits + delivery   |
-
+| [writing-style](./guides/writing-style.md)           | Tone, language split, show-don't-narrate      |
+| [react-code-style](./guides/react-code-style.md)     | Portable React/TS style rules                 |
+| [commit-conventions](./guides/commit-conventions.md) | Atomic Conventional Commits + delivery        |
+| [formatting](./guides/formatting.md)                 | prek + oxfmt; Cursor hooks                    |
 
 Router for agents in this repo: [AGENTS.md](./AGENTS.md).
 

@@ -1,0 +1,13 @@
+{
+  "name": "agent-handbook",
+  "private": true,
+  "scripts": {
+    "fmt": "oxfmt skills guides AGENTS.md README.md .cursor scripts/hooks package.json .oxfmtrc.jsonc .pre-commit-config.yaml",
+    "fmt:check": "oxfmt --check skills guides AGENTS.md README.md .cursor scripts/hooks package.json .oxfmtrc.jsonc .pre-commit-config.yaml",
+    "prepare": "command -v prek >/dev/null && prek install --install-hooks || true"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.24.0"
+  },
+  "packageManager": "pnpm@10.0.0"
+}

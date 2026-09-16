@@ -57,24 +57,30 @@ Before any agent-facing document exists, write `$TASK_DIR/brief-ko.md` and discu
 # <한 줄 제목> — 착수 전 확인
 
 ## 결론
+
 **<한 문장: 무엇을 만들 것인가.>** <그 결론이 서는 사실 한두 문장.>
 
 ## 범위
+
 | 포함 | 제외 |
-| --- | --- |
+| ---- | ---- |
 
 ## 완료 조건
+
 - <사용자가 확인할 수 있는 검사. 결정 전엔 초안이라고 표시>
 
 ## 결정해 주셔야 하는 것
+
 ❓ **Q1 — <제목>**: <질문. 선택지가 있으면 나열>
 ➡️ 추천: <답과 한 줄 이유>
 (프런티어 전체, 번호 순)
 
 ## 크기 (선택)
-size: S | M | L · 이유 한 줄  (shape — see planner; not a binding lane)
+
+size: S | M | L · 이유 한 줄 (shape — see planner; not a binding lane)
 
 ## 하지 않는 것
+
 - …
 ```
 
@@ -90,15 +96,24 @@ Only after confirmation, write `$TASK_DIR/brief.md` in English. The whole file i
 # <title>
 
 ## Goal
+
 ## Done when
+
 ## Out of scope
+
 ## Constraints
+
 ## Size hint (optional)
+
 size: S | M | L · why: <one line>
+
 ## Decisions taken
-| Q | answer | recommended? |
-| --- | --- | --- |
+
+| Q   | answer | recommended? |
+| --- | ------ | ------------ |
+
 ## Executor prompt
+
 GOAL · CONTEXT · CONSTRAINTS · OUTPUT · DONE WHEN
 ```
 

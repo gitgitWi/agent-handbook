@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/oxfmt-after-edit.sh",
+        "matcher": "Write|TabWrite"
+      }
+    ]
+  }
+}

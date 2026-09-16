@@ -67,7 +67,7 @@ Where structure already exists — algorithm, call order, file layout, component
 - **comparison too dense for Mermaid; layout; slide** → one focused HTML file
 
 - Pick the single smallest view that carries the point.
-- A diagram is body text, not decoration. Prose holds only what the view cannot — *why this option*.
+- A diagram is body text, not decoration. Prose holds only what the view cannot — _why this option_.
 - Verify Mermaid by rendering, not by parse alone. Use `<br/>` inside nodes; quote labels with punctuation.
 - Place each view next to the short prose it supports.
 

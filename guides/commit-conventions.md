@@ -20,15 +20,15 @@ summary:
 
 Format: [`Conventional Commits`](https://www.conventionalcommits.org/) — `<type>(optional scope): short subject` plus a body when needed.
 
-| type | when |
-| --- | --- |
-| **feat** | new user-facing capability or skill/guide the handbook did not have |
-| **fix** | bug fix or correction of wrong fact / broken link |
-| **docs** | documentation, guides, README, agent-facing skill text |
-| **chore** | tooling, meta, mechanical repo maintenance unrelated to doc meaning |
-| **refactor** | structure change with the same meaning (rare for docs) |
-| **test** | tests only |
-| **ci** | CI config only |
+| type         | when                                                                |
+| ------------ | ------------------------------------------------------------------- |
+| **feat**     | new user-facing capability or skill/guide the handbook did not have |
+| **fix**      | bug fix or correction of wrong fact / broken link                   |
+| **docs**     | documentation, guides, README, agent-facing skill text              |
+| **chore**    | tooling, meta, mechanical repo maintenance unrelated to doc meaning |
+| **refactor** | structure change with the same meaning (rare for docs)              |
+| **test**     | tests only                                                          |
+| **ci**       | CI config only                                                      |
 
 Scope is optional. Prefer a short path or area (`guides`, `skills`, `readme`) when it helps history filters.
 

@@ -1,0 +1,13 @@
+# Git hooks via prek (Rust). Install: prek install --install-hooks
+# https://github.com/j178/prek
+default_install_hook_types: [pre-commit]
+
+repos:
+  - repo: local
+    hooks:
+      - id: oxfmt
+        name: oxfmt
+        entry: scripts/hooks/oxfmt-staged.sh
+        language: system
+        pass_filenames: true
+        files: ^(skills/|guides/|\.cursor/|scripts/hooks/).+\.(tsx?|jsx?|jsonc?|md|ya?ml|toml|css|html)$|^(AGENTS|README)\.md$|^\.(pre-commit-config\.yaml|oxfmtrc\.jsonc)$|^package\.json$
