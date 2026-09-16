@@ -1,8 +1,8 @@
 ---
 title: Prompting checklist
-when_to_read: writing or tuning a dispatch prompt, settling a brief.md executor section, or choosing effort and output shape for Claude or OpenAI (GPT-5.6) agent roles
+when_to_read: writing or tuning a dispatch prompt, settling a brief.md executor section, or choosing effort and output shape for Claude or OpenAI (GPT-5.6 Sol / GPT-6 Astra) agent roles
 summary:
-  - Applied checklist for Claude (Opus / Sonnet / Fable) and OpenAI GPT-5.6 Sol
+  - Applied checklist for Claude (Opus / Sonnet / Fable) and OpenAI (GPT-5.6 Sol baseline, GPT-6 Astra escalation)
   - Full upstream text lives in references/prompting/ — re-fetch there; do not edit mirrors by hand
   - settle-spec and planner consumers apply this when shaping agent-facing prompts
 ---
@@ -61,6 +61,20 @@ Full: [references/prompting/openai/prompt-guidance-gpt-5p6.md](../references/pro
 
 API / migration context: [references/prompting/openai/using-gpt-5.6.md](../references/prompting/openai/using-gpt-5.6.md). Model card: [references/prompting/openai/gpt-5.6.md](../references/prompting/openai/gpt-5.6.md).
 
+## OpenAI — GPT-6 Astra (escalation)
+
+Reach for **GPT-6 Astra** (`gpt-6-astra`) when GPT-5.6 Sol is not enough — and when Claude Fable 5.1 is not enough for the hardest review / synthesis work: long multi-step autonomy, computer use, research-heavy or document-heavy end-to-end tasks.
+
+- More likely to **ask before assuming** than Sol. If you want autonomous follow-through, prompt for bias to action, treat "can you / help me" as do-the-work, and ask for approval only after a concrete reviewable result.
+- Stronger instruction following and more sensitive to skills / `AGENTS.md` — audit those files; make **user instructions outrank skill guidelines** when they conflict.
+- If a skill causes an early pause, require the model to name/link the SKILL.md and quote the line it followed.
+- Specify writing style if you do not want default list/table-heavy Markdown; ban slop phrases when polish matters.
+- Tune **subagent delegation** explicitly (when to parallelize, legible inter-agent messages).
+- For coding, calibrate testing breadth — avoid over-testing small reversible changes.
+- Migration: no `temperature` / `top_p`; tool calling via Responses API; if you used `none`/`minimal` reasoning, start from `low`.
+
+Full: [references/prompting/openai/using-gpt-6-astra.md](../references/prompting/openai/using-gpt-6-astra.md) (§ Prompting best practices). Model card: [references/prompting/openai/gpt-6-astra.md](../references/prompting/openai/gpt-6-astra.md).
+
 ## OpenAI — general API prompting
 
 - Durable instructions in system/developer roles; user turn for the task.
@@ -92,5 +106,5 @@ DONE WHEN   deterministic checks only: file::test, command + expected exit, brow
 
 ## References
 
-- Local mirrors: [references/prompting/](../references/prompting/README.md) (Anthropic + OpenAI GPT-5.6; collected 2026-09-16).
+- Local mirrors: [references/prompting/](../references/prompting/README.md) (Anthropic + OpenAI GPT-5.6 Sol / GPT-6 Astra; collected 2026-09-16).
 - Adapted checklist shape from a personal prompting README (est-work `wiki/prompting/README.md`).

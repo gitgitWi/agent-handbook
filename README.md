@@ -46,7 +46,7 @@ Guides are ordinary markdown — link them from `AGENTS.md` / `CLAUDE.md`, or re
 
 | Guide                                                | When                                     |
 | ---------------------------------------------------- | ---------------------------------------- |
-| [prompting](./guides/prompting.md)                   | Claude + OpenAI GPT-5.6 checklist        |
+| [prompting](./guides/prompting.md)                   | Claude + OpenAI GPT-5.6 Sol / Astra checklist |
 | [writing-style](./guides/writing-style.md)           | Tone, language split, show-don't-narrate |
 | [react-code-style](./guides/react-code-style.md)     | Portable React/TS style rules            |
 | [commit-conventions](./guides/commit-conventions.md) | Atomic Conventional Commits + delivery   |
