@@ -4,7 +4,7 @@ when_to_read: writing any agent-facing or human-facing document, PR/issue body, 
 summary:
   - Tone — no mannered prose, no verbosity, no over-clipping
   - Language — agents English, humans Korean; derived canon rule when both exist
-  - Show structure instead of narrating it; no hard wrap for column width
+  - Show structure instead of narrating it; prefer heading/list over wide tables; no hard wrap
 ---
 
 # Writing style
@@ -35,10 +35,8 @@ Overcorrecting into telegraphese — dropping connecting words until someone who
 
 ## Language — the reader decides
 
-| Audience | Language | Examples |
-| --- | --- | --- |
-| Agents | English | `AGENTS.md`, skills, guides, `brief.md`, `plan.md`, `tasks.md` |
-| Humans | Korean | decision docs, PR/issue/commit text, `brief-ko.md`, `plan-ko.md` |
+- **Agents → English.** `AGENTS.md`, skills, guides, `brief.md`, `plan.md`, `tasks.md`.
+- **Humans → Korean.** Decision docs, PR/issue/commit text, `brief-ko.md`, `plan-ko.md`.
 
 Who must read and act decides the language — directory is only a proxy.
 
@@ -59,20 +57,31 @@ Rules once an English canon exists:
 
 Where structure already exists — algorithm, call order, file layout, component hierarchy, branch — show it in that structure.
 
-| the point is | view | fence |
-| --- | --- | --- |
-| policy, algorithm, step order | pseudocode | `text` |
-| runtime control flow | indented call tree | `text` |
-| file/module ownership or change scope | shallow file tree; `[ADD]` · `[MODIFY]` · `[DELETE]` + reason | `text` |
-| UI hierarchy and state owners | component tree | `tsx` |
-| branch, hand-off, data flow | one Mermaid `flowchart` or `sequenceDiagram` | `mermaid` |
-| what changed in an existing shape | same tree/list as `diff` | `diff` |
-| parallel cases with same fields | table, one fact per cell | — |
+- **policy, algorithm, step order** → pseudocode (`text`)
+- **runtime control flow** → indented call tree (`text`)
+- **file/module ownership or change scope** → shallow file tree; `[ADD]` · `[MODIFY]` · `[DELETE]` + reason (`text`)
+- **UI hierarchy and state owners** → component tree (`tsx`)
+- **branch, hand-off, data flow** → one Mermaid `flowchart` or `sequenceDiagram` (`mermaid`)
+- **what changed in an existing shape** → same tree/list as `diff` (`diff`)
+- **parallel cases with the same fields** → see Tables below
+- **comparison too dense for Mermaid; layout; slide** → one focused HTML file
 
 - Pick the single smallest view that carries the point.
 - A diagram is body text, not decoration. Prose holds only what the view cannot — *why this option*.
 - Verify Mermaid by rendering, not by parse alone. Use `<br/>` inside nodes; quote labels with punctuation.
 - Place each view next to the short prose it supports.
+
+### Tables
+
+Markdown tables render poorly on many platforms once they grow wide. Prefer a **heading + list** (or a numbered list of sections) when any of these hold:
+
+- The table would have **three or more columns**.
+- One column is only a row index / sequence number (`#`, `1`, `2` …) — put the number in the heading or list marker instead.
+- A cell needs more than one short fact, or would need a line break.
+
+Two-column tables (label → value, or type → when) are fine when cells stay one line.
+
+**Exception:** a short option-comparison matrix where columns are alternatives (추천안 · 대안) and rows are the same fields — keep that as a table so choices stay side by side.
 
 For documents a human reads and acts on, also follow [`write-for-human`](../skills/write-for-human/SKILL.md).
 

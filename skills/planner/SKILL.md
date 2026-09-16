@@ -28,15 +28,13 @@ If `brief.md` is missing or Done-when is fuzzy, stop and run or request `settle-
 
 Sections in this order; each as the smallest view that carries it ([writing-style](../../guides/writing-style.md) — show, do not narrate):
 
-| # | section | shape | rule |
-| --- | --- | --- | --- |
-| 1 | Intent | ≤3 lines | the problem, who has it, why now |
-| 2 | Change | shallow file tree | every line `[ADD]`·`[MODIFY]`·`[DELETE]` + one reason; slice boundaries marked; ≤5 files per slice, ≤3 slices |
-| 3 | Effect | 4 lines | code logic · developer experience · user experience · business; `none` where none |
-| 4 | Scope | bullets + 1 sentence | in / out; where this sits in the architecture |
-| 5 | Completion criteria | list | deterministic only: `file::test`, command + expected exit/output, browser check + expected observed value |
-| 6 | Why this option | prose | alternatives rejected and why; the smaller change you considered |
-| 7 | Decisions for you | list or empty | anything the user must choose; non-empty → also write `plan-ko.md` via write-for-human |
+1. **Intent** — ≤3 lines. The problem, who has it, why now.
+2. **Change** — shallow file tree. Every line `[ADD]`·`[MODIFY]`·`[DELETE]` + one reason; slice boundaries marked; ≤5 files per slice, ≤3 slices.
+3. **Effect** — 4 lines: code logic · developer experience · user experience · business; `none` where none.
+4. **Scope** — bullets + 1 sentence. In / out; where this sits in the architecture.
+5. **Completion criteria** — list. Deterministic only: `file::test`, command + expected exit/output, browser check + expected observed value.
+6. **Why this option** — prose. Alternatives rejected and why; the smaller change you considered.
+7. **Decisions for you** — list or empty. Anything the user must choose; non-empty → also write `plan-ko.md` via write-for-human.
 
 ### `$TASK_DIR/tasks.md`
 
